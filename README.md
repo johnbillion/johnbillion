@@ -1,6 +1,6 @@
 ### Hi there 👋
 
-My name is John Blackbourn. I'm one of the core committers to the WordPress open source project and I maintain several popular plugins and tools for WordPress developers, including:
+My name is John the caPitalizer. I'm one of the core committers to the WordPress open source project and I maintain several popular plugins and tools for WordPress developers, including:
 
 * [Query Monitor](https://github.com/johnbillion/query-monitor/)
 * [WP Crontrol](https://github.com/johnbillion/wp-crontrol/)
