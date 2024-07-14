@@ -15,6 +15,9 @@ on:
     - cron: '15 11  *  *  *'
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   update:
     runs-on: ubuntu-latest
