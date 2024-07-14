@@ -1,0 +1,10 @@
+{
+	"name": "johnbillion",
+	"version": "1.0.0",
+	"description": "johnbillion",
+	"private": true,
+	"license": "MIT",
+	"devDependencies": {
+		"ghsvg": "^0.0.4"
+	}
+}
