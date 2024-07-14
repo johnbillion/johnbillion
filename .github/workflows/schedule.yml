@@ -1,0 +1,38 @@
+name: Schedule
+
+on:
+  schedule:
+    # Daily at 11:15 UTC.
+    #
+    #         ┌───────────── minute           (0 - 59)
+    #         │  ┌────────── hour             (0 - 23)
+    #         │  │  ┌─────── day of the month (1 - 31)
+    #         │  │  │  ┌──── month            (1 - 12 or JAN-DEC)
+    #         │  │  │  │  ┌─ day of the week  (0 - 6 or SUN-SAT)
+    #         │  │  │  │  │
+    #         │  │  │  │  │
+    #         │  │  │  │  │
+    - cron: '15 11  *  *  *'
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: npm i
+
+      - name: Update sponsors.svg
+        run: npx ghsvg
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit
+        uses: EndBug/add-and-commit@v9
+        with:
+          message: 'Update sponsors.svg'
+          add: 'sponsors.svg'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
