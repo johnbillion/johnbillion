@@ -29,14 +29,17 @@ jobs:
         run: npm i
 
       - name: Update sponsors.svg
-        run: npx ghsvg
+        run: npm run sponsors-svg
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Save as a PNG
+        run: npm run sponsors-png
 
       - name: Commit
         uses: EndBug/add-and-commit@v9
         with:
-          message: 'Update sponsors.svg'
-          add: 'sponsors.svg'
+          message: 'Update sponsors image'
+          add: 'sponsors.svg sponsors.png'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

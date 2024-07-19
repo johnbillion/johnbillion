@@ -5,6 +5,11 @@
 	"private": true,
 	"license": "MIT",
 	"devDependencies": {
-		"ghsvg": "^0.0.4"
+		"ghsvg": "^0.0.4",
+		"svgexport": "^0.4.2"
+	},
+	"scripts": {
+		"sponsors-svg": "ghsvg",
+		"sponsors-png": "svgexport sponsors.svg sponsors.png"
 	}
 }
