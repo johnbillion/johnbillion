@@ -11,18 +11,14 @@ My name is John Blackbourn. I'm one of the core committers to the WordPress open
 
 ## Sponsors
 
-The time that I spend maintaining my open source projects is in part sponsored by:
+<p align="center">The time that I spend maintaining my open source projects is in part sponsored by:</p>
 
-<center>
+<p align="center"><a href="https://automattic.com"><img src="assets/sponsors/automattic.svg" alt="Automattic" width="50%"></a></p>
 
-<a href="https://automattic.com"><img src="./assets/sponsors/automattic.svg" alt="Automattic" width="50%" align=center></a>
+<p align="center"><a href="https://servmask.com"><img src="assets/sponsors/servmask.svg" alt="ServMask" width="25%"></a></p>
 
-<a href="https://servmask.com"><img src="./assets/sponsors/servmask.svg" alt="ServMask" width="25%" align=center></a>
+<p align="center">Plus all my kind sponsors on GitHub:</p>
 
-Plus all my kind sponsors on GitHub:
+<p align="center"><a href="https://github.com/sponsors/johnbillion"><img src="sponsors.svg" alt="Sponsors"></p>
 
-[![Sponsors](./sponsors.svg)](https://github.com/sponsors/johnbillion)
-
-[Click here to find out about supporting my open source tools and plugins](https://github.com/sponsors/johnbillion).
-
-</center>
+<p align="center"><a href="https://github.com/sponsors/johnbillion">Click here to find out about supporting my open source tools and plugins</a>.</p>
