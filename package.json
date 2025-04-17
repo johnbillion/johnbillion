@@ -9,6 +9,7 @@
 		"svgexport": "^0.4.2"
 	},
 	"scripts": {
+		"pngs": "for file in assets/sponsors/*.svg; do svgexport \"$file\" \"${file%.svg}.png\" 500:; done",
 		"sponsors-svg": "ghsvg",
 		"sponsors-png": "svgexport sponsors.svg sponsors.png"
 	}
