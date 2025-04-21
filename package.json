@@ -5,7 +5,7 @@
 	"private": true,
 	"license": "MIT",
 	"devDependencies": {
-		"ghsvg": "^0.0.4",
+		"@johnbillion/ghsvg": "^0.0.5",
 		"svgexport": "^0.4.2"
 	},
 	"scripts": {
