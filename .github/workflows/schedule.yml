@@ -36,6 +36,9 @@ jobs:
       - name: Save as a PNG
         run: npm run sponsors-png
 
+      - name: Generate PNGs from SVG logos
+        run: npm run pngs
+
       - name: Commit
         uses: EndBug/add-and-commit@v9
         with:
