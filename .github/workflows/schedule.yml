@@ -43,6 +43,6 @@ jobs:
         uses: EndBug/add-and-commit@a94899bca583c204427a224a7af87c02f9b325d5 # v9.1.4
         with:
           message: 'Update sponsors image'
-          add: 'sponsors.svg sponsors.png'
+          add: 'sponsors.svg sponsors.png assets/sponsors'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
