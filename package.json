@@ -10,11 +10,11 @@
 	},
 	"devDependencies": {
 		"@johnbillion/ghsvg": "^0.0.5",
-		"svgexport": "^0.4.2"
+		"@resvg/resvg-js": "^2.6.2"
 	},
 	"scripts": {
-		"pngs": "for file in assets/sponsors/*.svg; do svgexport \"$file\" \"${file%.svg}.png\" 500:; done",
+		"pngs": "for file in assets/sponsors/*.svg; do node scripts/render.mjs \"$file\" \"${file%.svg}.png\" 500; done",
 		"sponsors-svg": "ghsvg",
-		"sponsors-png": "svgexport sponsors.svg sponsors.png"
+		"sponsors-png": "node scripts/render.mjs sponsors.svg sponsors.png"
 	}
 }
