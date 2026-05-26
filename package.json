@@ -4,6 +4,10 @@
 	"description": "johnbillion",
 	"private": true,
 	"license": "MIT",
+	"engines": {
+		"node": ">=24.0",
+		"npm": ">=11.10.0"
+	},
 	"devDependencies": {
 		"@johnbillion/ghsvg": "^0.0.5",
 		"svgexport": "^0.4.2"
