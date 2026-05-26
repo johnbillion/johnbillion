@@ -51,6 +51,18 @@ jobs:
 
       - name: Commit
         run: | #shell
+          # The GitHub avatar CDN returns subtly different JPEG bytes for the same
+          # avatar across runs which would otherwise produce a daily commit even when
+          # nothing visually changed. This ignores those small variances.
+          png_noise_threshold=50
+          old_size=$(git cat-file -p HEAD:sponsors.png | wc -c)
+          new_size=$(wc -c < sponsors.png)
+          png_delta=$(( new_size - old_size ))
+          png_delta=${png_delta#-}
+          if [ "$png_delta" -lt "$png_noise_threshold" ]; then
+            echo "sponsors.png delta is $png_delta bytes (< $png_noise_threshold) — discarding."
+            git checkout HEAD -- sponsors.svg sponsors.png
+          fi
           git add sponsors.svg sponsors.png assets/sponsors
           if git diff --staged --quiet; then
             echo "No changes to commit."
